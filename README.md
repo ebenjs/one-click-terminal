@@ -24,7 +24,7 @@ None at the moment. If you encounter any, please report them on the [issue track
 
 ## Release Notes
 
-### 1.0.0
+### 0.0.1
 
 - Initial release of **One Click Terminal**.
 - Basic functionality to toggle the terminal from the status bar.
