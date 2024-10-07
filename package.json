@@ -4,13 +4,17 @@
   "description": "\"One Click Terminal\" adds a convenient terminal icon to the VS Code status bar, allowing you to quickly open or close the terminal with a single click. Simplify your workflow and save time with this easy-to-access shortcut, perfect for developers who frequently use the terminal.",
   "publisher": "ebenjs",
   "version": "0.0.1",
+  "repository": "https://github.com/ebenjs/one-click-terminal.git",
+  "icon": "assets/logo.png",
   "engines": {
     "vscode": "^1.94.0"
   },
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "*"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
