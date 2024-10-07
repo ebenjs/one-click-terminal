@@ -8,9 +8,7 @@
 - One-click access to open or close the terminal.
 - Saves time and improves productivity for terminal-heavy workflows.
 
-![One Click Terminal in action](assets/one-click-terminal.png)
-
-> **Tip**: Use animations to demonstrate the extension in action for even better clarity. 
+![Screenshot](assets/screenshot.png) 
 
 ## Requirements
 
