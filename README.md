@@ -8,7 +8,7 @@
 - One-click access to open or close the terminal.
 - Saves time and improves productivity for terminal-heavy workflows.
 
-![One Click Terminal in action](images/one-click-terminal.png)
+![One Click Terminal in action](assets/one-click-terminal.png)
 
 > **Tip**: Use animations to demonstrate the extension in action for even better clarity. 
 
@@ -38,3 +38,7 @@ None at the moment. If you encounter any, please report them on the [issue track
 Please make sure to follow the [VS Code Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines) for best practices when contributing to the development of this extension.
 
 **Enjoy using One Click Terminal!**
+
+<!-- credit about logo author website -->
+
+**Logo Credits**: [Command-Line / Veryicon](https://www.veryicon.com/icons/miscellaneous/network-security-computer/command-line.html) from [Nora](https://www.veryicon.com/icons/miscellaneous/network-security-computer/command-line.html) 

@@ -1,19 +1,38 @@
-import * as vscode from 'vscode';
+import * as vscode from "vscode";
+import { TerminalState } from "./extension.type";
+import { toggleTerminalState } from "./helper";
+
+let currentTerminalState = TerminalState.Hidden;
 
 export function activate(context: vscode.ExtensionContext) {
+  const statusBarItem = vscode.window.createStatusBarItem(
+    vscode.StatusBarAlignment.Left,
+    -1
+  );
 
-	// Use the console to output diagnostic information (console.log) and errors (console.error)
-	// This line of code will only be executed once when your extension is activated
-	console.log('Congratulations, your extension "one-click-terminal" is now active!');
+  statusBarItem.command = "extension.toggleTerminal";
 
-	const statusBarItem = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left, 100);
-	statusBarItem.command = 'workbench.action.terminal.toggleTerminal';
-	statusBarItem.text = '$(terminal) Open Terminal';
-	statusBarItem.tooltip = 'Open Terminal';
-	statusBarItem.show();
+  statusBarItem.text = `$(terminal) Terminal`;
+  statusBarItem.tooltip = "Click to show or hide the terminal";
 
-	context.subscriptions.push(statusBarItem);
+  statusBarItem.show();
+
+  const toggleTerminalCommand = vscode.commands.registerCommand(
+    "extension.toggleTerminal",
+    () => {
+      currentTerminalState = toggleTerminalState(currentTerminalState);
+      if (currentTerminalState === TerminalState.Hidden) {
+        vscode.commands.executeCommand(
+          "workbench.action.terminal.toggleTerminal"
+        );
+      } else {
+        vscode.commands.executeCommand("workbench.action.closePanel");
+      }
+    }
+  );
+
+  context.subscriptions.push(statusBarItem);
+  context.subscriptions.push(toggleTerminalCommand);
 }
 
-// This method is called when your extension is deactivated
 export function deactivate() {}
